@@ -24,9 +24,11 @@ test("should render <a> tag", () => {
 })
 
 test("should render <Link> component", () => {
-    const { container } = render(<Router>
+    const { container } = render(
+    <Router>
         <Button href="" type="link" isExternal></Button>
-        </Router>);
+    </Router>
+    );
 
     expect(container.querySelector('a')).toBeInTheDocument()
 })
